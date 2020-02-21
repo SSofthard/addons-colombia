@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* income_tax_rte
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-21 20:45+0000\n"
+"PO-Revision-Date: 2020-02-21 20:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: income_tax_rte
+#: model:ir.model.fields,help:income_tax_rte.field_account_tax__is_rte
+msgid "Check this if the tax is a withholding tax."
+msgstr "Marque esto, si el impuesto es una retención de impuestos."
+
+#. module: income_tax_rte
+#: model:ir.model.fields,field_description:income_tax_rte.field_account_tax__is_rte
+msgid "IS Rte"
+msgstr "ES Rte"
+
+#. module: income_tax_rte
+#: model:ir.model,name:income_tax_rte.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de Factura"
+
+#. module: income_tax_rte
+#: model:ir.model,name:income_tax_rte.model_account_invoice_tax
+msgid "Invoice Tax"
+msgstr "Impuesto de factura"
+
+#. module: income_tax_rte
+#: model_terms:ir.ui.view,arch_db:income_tax_rte.view_tax_form_rte_inherit
+msgid "Rte"
+msgstr ""
+
+#. module: income_tax_rte
+#: model:ir.model,name:income_tax_rte.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: income_tax_rte
+#: model:ir.model.fields,field_description:income_tax_rte.field_account_tax__tax_id
+msgid "Tax Rte On"
+msgstr "Aplicar Rte Sobre"
+
+#. module: income_tax_rte
+#: code:addons/income_tax_rte/models/account_invoice.py:50
+#, python-format
+msgid "Warning!"
+msgstr "Aviso!"
+
+#. module: income_tax_rte
+#: code:addons/income_tax_rte/models/account_invoice.py:51
+#, python-format
+msgid "Withholding taxes (%s), you must first select the tax to which the withholding applies (%s)."
+msgstr "Impuestos de retención (%s), primero debe seleccionar el impuesto al que se aplica la retención (%s)."
+

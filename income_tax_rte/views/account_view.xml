@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+
+   <record id="view_tax_form_rte_inherit" model="ir.ui.view">
+        <field name="name">view.tax.rte.form.inherit</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Rte">
+                    <group>
+                        <group>
+                            <field name="is_rte"/>
+                            <field name="tax_id" domain="[('is_rte', '=', False)]" attrs="{'invisible':[('is_rte','=', False)], 'required':[('is_rte','=', True)]}" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+   </record>
+   
+</odoo>
