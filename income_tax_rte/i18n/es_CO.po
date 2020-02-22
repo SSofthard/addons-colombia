@@ -1,29 +1,31 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* income_tax_rte
+# 	* income_tax_rte
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-21 20:45+0000\n"
-"PO-Revision-Date: 2020-02-21 20:45+0000\n"
+"PO-Revision-Date: 2020-02-21 19:39-0500\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"Language: es_CO\n"
+"X-Generator: Poedit 2.3\n"
 
 #. module: income_tax_rte
 #: model:ir.model.fields,help:income_tax_rte.field_account_tax__is_rte
 msgid "Check this if the tax is a withholding tax."
-msgstr "Marque esto, si el impuesto es una retención de impuestos."
+msgstr "Marque esto, si el impuesto es una Retención Sobre el IVA."
 
 #. module: income_tax_rte
 #: model:ir.model.fields,field_description:income_tax_rte.field_account_tax__is_rte
 msgid "IS Rte"
-msgstr "ES Rte"
+msgstr "ES ReteIVA"
 
 #. module: income_tax_rte
 #: model:ir.model,name:income_tax_rte.model_account_invoice_line
@@ -38,7 +40,7 @@ msgstr "Impuesto de factura"
 #. module: income_tax_rte
 #: model_terms:ir.ui.view,arch_db:income_tax_rte.view_tax_form_rte_inherit
 msgid "Rte"
-msgstr ""
+msgstr "ReteIVA"
 
 #. module: income_tax_rte
 #: model:ir.model,name:income_tax_rte.model_account_tax
@@ -48,7 +50,7 @@ msgstr "Impuesto"
 #. module: income_tax_rte
 #: model:ir.model.fields,field_description:income_tax_rte.field_account_tax__tax_id
 msgid "Tax Rte On"
-msgstr "Aplicar Rte Sobre"
+msgstr "Aplicar ReteIVA Sobre"
 
 #. module: income_tax_rte
 #: code:addons/income_tax_rte/models/account_invoice.py:50
@@ -60,5 +62,4 @@ msgstr "Aviso!"
 #: code:addons/income_tax_rte/models/account_invoice.py:51
 #, python-format
 msgid "Withholding taxes (%s), you must first select the tax to which the withholding applies (%s)."
-msgstr "Impuestos de retención (%s), primero debe seleccionar el impuesto al que se aplica la retención (%s)."
-
+msgstr "Impuestos de retención de (%s), primero debe seleccionar el impuesto al que se aplica la retención (%s)."
