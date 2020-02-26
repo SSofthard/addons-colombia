@@ -36,19 +36,12 @@ class AccountInvoiceLine(models.Model):
 
     @api.onchange('invoice_line_tax_ids')
     def onchange_invoice_line_tax_ids(self):
-        taxes_rte = []
-        taxes_rte_name = []
-        taxes_rte_on = []
         for tax in self.invoice_line_tax_ids:
-            if tax.is_rte == True:
-                taxes_rte.append(tax.id)
-                taxes_rte_name.append(tax.name)
-                taxes_rte_on.append(tax.tax_id.name)
-        if self.invoice_line_tax_ids and self.invoice_line_tax_ids.ids == taxes_rte:
-            self.invoice_line_tax_ids = False
-            warning = {
-                    'title': _('Warning!'),
-                    'message': _('Withholding taxes (%s), you must first select the tax to which the withholding applies (%s).') %(", ".join(taxes_rte_name), ", ".join(taxes_rte_on)),
-                }
-            return {'warning': warning}
-        
+            if tax.is_rte:
+                if tax.tax_id.id not in self.invoice_line_tax_ids.ids:
+                    self.invoice_line_tax_ids = False
+                    warning = {
+                            'title': _('Warning!'),
+                            'message': _('Withholding taxes (%s), you must first select the tax to which the withholding applies (%s).') %(tax.name, tax.tax_id.name),
+                        }
+                    return {'warning': warning}
